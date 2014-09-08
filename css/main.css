@@ -1,0 +1,50 @@
+html {
+	height: 100%;
+	background: url(../img/small_steps.png) repeat;
+	background-color: lightgrey;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+#wrapper {
+	width: 800px;
+	margin: 20px auto;
+}
+
+#top {
+	margin-bottom: 80px;
+	border: none;
+}
+
+#top h1 {
+	font-family: 'comic sans ms', tahoma, sans-serif;
+	margin-left: 80px;
+	margin-bottom: 10px;
+	font-size: 2em;
+}
+
+#top h2 {
+margin-left: 20px;
+font-family: 'century gothic', tahoma, sans-serif;
+font-style: italic;
+font-weight: bolder;
+}
+
+#body {
+	text-align: center;
+}
+
+#form {
+	padding: 30px 20px;
+}
+
+input[type="text"] {
+	width: 400px;
+}
+
+button {
+	width: 80px;
+}
