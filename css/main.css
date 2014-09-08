@@ -9,6 +9,7 @@ a {
 	color: inherit;
 }
 
+
 #wrapper {
 	width: 800px;
 	margin: 20px auto;
@@ -47,4 +48,24 @@ input[type="text"] {
 
 button {
 	width: 80px;
+}
+
+#shopcart{
+	width: 49%;
+	min-height: 100px;
+	float: left;
+	background-color: rgba(240,240,240,.7);
+}
+
+#checkout {
+	width: 49%;
+	min-height: 100px;
+	float: right;
+	background-color: rgba(240,240,240,.7);
+}
+
+#shopcart h3, #checkout h3{
+	margin: 20px auto;
+	font-family: tahoma, sans-serif;
+	font-weight: bold;
 }

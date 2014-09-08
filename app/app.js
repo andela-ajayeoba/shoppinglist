@@ -23,6 +23,7 @@ $("#add").click(function() {
 	shop.addItems();
  	shop.validation();
  	$("#item-name").val("");
+ 	$("p").hide();
 });
 
 $(document).on('click','#delete', function(){
