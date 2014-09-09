@@ -36,10 +36,6 @@ font-style: italic;
 font-weight: bolder;
 }
 
-.body {
-	text-align: center;
-}
-
 #form {
 	padding: 30px 20px;
 }
@@ -52,24 +48,42 @@ button {
 	width: 80px;
 }
 
-#shopcart{
+#shoplist, .body {
+	text-align: center;
+}
+
+#message {
+	color: #757d75;
+	font-family: tahoma, sans-serif;
+}
+
+#shoplist h1 {
+	margin: 20px auto;
+	font-family: tahoma, sans-serif;
+	font-weight: bold;
+	text-align: center;
+	color: #757d75;
+}
+
+#shopcart, #checkout {
 	width: 49%;
 	min-height: 300px;
+}
+
+#shopcart{
 	float: left;
-	background-color: rgba(240,240,240,.7);
 }
 
 #checkout {
-	width: 49%;
-	min-height: 300px;
 	float: right;
-	background-color: rgba(240,240,240,.7);
 }
 
 #shopcart h3, #checkout h3{
 	margin: 20px auto;
 	font-family: tahoma, sans-serif;
 	font-weight: bold;
+	text-align: center;
+	display: none;
 }
 
 #checker {
@@ -77,5 +91,13 @@ button {
 }
 
 #delete {
-	margin-right: 5px;
+	margin-right: 20px;
+	float: right;
+	clear: both;
 }
+
+#uncomplete li, #complete li {
+	margin: 10px 20px;
+	padding: 10px 10px;
+}
+

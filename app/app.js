@@ -1,43 +1,3 @@
-// var itemName;
-
-// var shop = {
-// 	// add properties and actions.
-
-// 	addItems: function() {
-// 		itemName = $.trim($("#item-name").val());
-// 	},
-
-// 	validation: function() {
-
-// 		if (itemName === null || itemName === "" || itemName.length < 3 || itemName.length > 50 ) {
-// 			alert("<p>Enter a valid value</p>");
-// 		}
-// 		else {
-// 			$("#uncomplete").slideDown().append('<li id="list">' + '<input type="checkbox" id="checker">' + itemName + '<button type="button" id="delete">' + "Delete" + "</button>" + "</li>");
-// 			$("#uncomplete #list").slideDown("slow");
-// 		}
-// 	}
-
-// }
-
-// $("#add").click(function() {
-// 	shop.addItems();
-//  	shop.validation();
-//  	$("#item-name").val("");
-//  	$("p").hide();
-// });
-
-// $(document).on('click','#delete', function(){
-// 	$(this).parent().remove();
-// })
-
-// $("#uncomplete").on('change', 'input[type=checkbox]', function() {
-// 	$("#complete").append($(this).parent());
-// });
-
-// $("#complete").on('change', 'input[type=checkbox]', function() {
-// 	$("#uncomplete").append($(this).parent());
-// });
 var itemName;
 
 var shop = {
@@ -52,46 +12,44 @@ var shop = {
 		shop.checkItems();
 	},
 
+	getItem: function () {
+		itemName = $("#item-name").val();
+	},
 
-//method tho validate the entry
+//method tho validate the entry and append a 
 
 	validate: function () {
 
-		var entry = $.trim($("#item-name").val());
-
-		if (!isNaN(entry) || entry === "" || entry === "undefined" ) {
-			alert("Please enter a brief description of the item");
+		if (!isNaN(itemName) || itemName === "" || typeof itemName === "undefined" ) {
+			$("#message").text("Please enter a brief description of the item");
 		}
 
-		else if (entry.length < 3) {
-			alert("Too short a description");
+		else if (itemName.length < 3) {
+			$("#message").text("Too short a description");
 		}
 
-		else if (entry.length > 50) {
-			alert("Too long a description");
+		else if (itemName.length > 50) {
+			$("#message").text("Too long a description");
 		}
+
 
 		else {
-			alert("item added successfully");
+			var listbuilder = '<li id="list"><input type="checkbox" id="checker">' + itemName + '<span id="right"><button type="button" id="delete">' + "Delete" + '</button></span></li>';
+			$("#uncomplete").append(listbuilder);	
+			$("#message").text("Item added to Shopping Cart");
 		}
-		return entry;
+		
 	},
 
 //method to add and append the item to the unordered list
 
 	addItems: function () {
 		$("#add").click(function(){
-			itemName = shop.validate();
+			shop.getItem();
+			shop.validate();
 			$("#item-name").val("");
-			if (itemName !== "") {
-				var listbuilder = '<li id="list"><input type="checkbox" id="checker">' + itemName + '<span id="right"><button type="button" id="delete">' + "Delete" + '</button></span></li>';
-				$("#uncomplete").append(listbuilder);
-
-			}
-
-			// else {
-			// 	alert("alert");
-			// }
+			$("p").hide();
+			$("#shopcart h3").show();
 		});
 	},
 
@@ -103,6 +61,7 @@ var shop = {
 
 		$("#uncomplete").on('change', 'input[type=checkbox]', function() {
  			$("#complete").append($(this).parent());
+ 			$("#checkout h3").show();
 		 });
 
 		//returns checked item from complete list back to the uncomplete list
