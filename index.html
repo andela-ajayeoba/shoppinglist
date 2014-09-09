@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Shopper| Nutty version</title>
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+	<div id="wrapper">
+		<div id="top">
+			<header>
+				<a href="index.html">
+					<h1>Shopper!</h1>
+					<h2>Your No. 1 Online Shopping List App</h2>
+				</a>
+			</header>
+		</div>
+		<div class="body">
+			<div id="message"></div>
+			<form id="form">
+				<input type="text" id="item-name">
+				<button type="button" id="add">Add</button>
+			</form>
+		</div>
+		<div id="shoplist">
+			<h1>YOUR SHOPPING LIST</h1>
+			<p>You have no item in your shopping list.</p>
+			<p>Add items using the input box above. It's free</p>
+		</div>
+		<div id="shopcart">
+			<h3>Shopping Cart</h3>
+			<ul id="uncomplete"></ul>
+		</div>
+		<div id="checkout">
+			<h3>Checkout Items</h3>
+			<ul id="complete"></ul>
+		</div>
+	</div>
+	<script src="app/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript" src="app/app.js"></script>
+</body>
+</html>

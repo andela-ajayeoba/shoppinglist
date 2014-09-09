@@ -1,0 +1,103 @@
+html {
+	height: 100%;
+	background: url(../img/bg.jpg) repeat;
+	background-color: lightgrey;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+
+#wrapper {
+	background: url(../img/giftly.png) repeat;
+	min-height: 700px;
+	width: 800px;
+	margin: 20px auto;
+}
+
+#top {
+	margin-bottom: 80px;
+	border: none;
+}
+
+#top h1 {
+	font-family: 'comic sans ms', tahoma, sans-serif;
+	margin-left: 80px;
+	margin-bottom: 10px;
+	font-size: 2em;
+}
+
+#top h2 {
+margin-left: 20px;
+font-family: 'century gothic', tahoma, sans-serif;
+font-style: italic;
+font-weight: bolder;
+}
+
+#form {
+	padding: 30px 20px;
+}
+
+input[type="text"] {
+	width: 400px;
+}
+
+button {
+	width: 80px;
+}
+
+#shoplist, .body {
+	text-align: center;
+}
+
+#message {
+	color: #757d75;
+	font-family: tahoma, sans-serif;
+}
+
+#shoplist h1 {
+	margin: 20px auto;
+	font-family: tahoma, sans-serif;
+	font-weight: bold;
+	text-align: center;
+	color: #757d75;
+}
+
+#shopcart, #checkout {
+	width: 49%;
+	min-height: 300px;
+}
+
+#shopcart{
+	float: left;
+}
+
+#checkout {
+	float: right;
+}
+
+#shopcart h3, #checkout h3{
+	margin: 20px auto;
+	font-family: tahoma, sans-serif;
+	font-weight: bold;
+	text-align: center;
+	display: none;
+}
+
+#checker {
+	margin-left: 10px;
+}
+
+#delete {
+	margin-right: 20px;
+	float: right;
+	clear: both;
+}
+
+#uncomplete li, #complete li {
+	margin: 10px 20px;
+	padding: 10px 10px;
+}
+
